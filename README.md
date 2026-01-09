@@ -99,40 +99,60 @@ bun run preview
 
 ## Deployment to Vercel
 
-This project is configured for easy deployment to Vercel.
+This project uses GitHub Actions to automatically deploy to Vercel on every push to `main`.
 
-### Option 1: Deploy via CLI
+### Setup GitHub Actions Deployment
 
-1. Install Vercel CLI (already included as dev dependency)
+1. **Create a Vercel project:**
+   - Go to [vercel.com](https://vercel.com) and sign in
+   - Click "Add New Project"
+   - Import your repository (just to create the project, don't connect it)
+   - Vercel will auto-detect Astro settings
+   - Click "Deploy" to create the initial project
 
-2. Login to Vercel:
-   ```sh
-   bunx vercel login
-   ```
+2. **Get your Vercel credentials:**
 
-3. Deploy:
-   ```sh
-   bun run deploy
-   ```
+   After creating the project, you need three values:
 
-   This will build your site and deploy to production.
+   - **VERCEL_TOKEN**: Go to [Vercel Account Settings → Tokens](https://vercel.com/account/tokens)
+     - Click "Create Token"
+     - Name it (e.g., "GitHub Actions")
+     - Copy the token
 
-### Option 2: Deploy via Git (Recommended)
+   - **VERCEL_ORG_ID**: Run this command locally:
+     ```sh
+     bunx vercel link
+     ```
+     Follow the prompts to link your project. This creates a `.vercel/project.json` file.
+     ```sh
+     cat .vercel/project.json
+     ```
+     Copy the `orgId` value
 
-1. Push your code to GitHub/GitLab/Bitbucket
+   - **VERCEL_PROJECT_ID**: From the same `.vercel/project.json` file, copy the `projectId` value
 
-2. Go to [vercel.com](https://vercel.com) and click "New Project"
+3. **Add GitHub Secrets:**
 
-3. Import your repository
+   Go to your GitHub repository → Settings → Secrets and variables → Actions → New repository secret
 
-4. Vercel will automatically detect Astro and configure:
-   - **Framework Preset**: Astro
-   - **Build Command**: `bun run build`
-   - **Output Directory**: `dist`
+   Add these three secrets:
+   - `VERCEL_TOKEN` - Your Vercel token
+   - `VERCEL_ORG_ID` - Your organization ID
+   - `VERCEL_PROJECT_ID` - Your project ID
 
-5. Click "Deploy"
+4. **Deploy:**
 
-Your site will automatically deploy on every push to your main branch.
+   Push to main branch and GitHub Actions will automatically:
+   - Build your site with Bun
+   - Deploy to Vercel production
+   - Check the Actions tab to see deployment progress
+
+### Manual Deploy (Optional)
+
+You can also deploy manually:
+```sh
+bun run deploy
+```
 
 ### Custom Domain
 

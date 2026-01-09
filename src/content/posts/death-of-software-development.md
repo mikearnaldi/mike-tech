@@ -15,7 +15,7 @@ Let me explain.
 
 ## The Ralph Wiggum Moment
 
-The broader community is just now realizing the power of AI. Last week, "Ralph Wiggum" went viral. Ralph is a technique that prompts agents like Claude Code in a deterministic loop to iteratively build large systems from lists of small tasks. Twitter exploded with discussions about it.
+The broader community is just now realizing the power of AI. Last week, [Ralph Wiggum](https://x.com/mattpocockuk/status/2007924876548637089) went viral. Ralph is a technique that prompts agents like Claude Code in a deterministic loop to iteratively build large systems from lists of small tasks. Twitter exploded with discussions about it.
 
 The name comes from [Geoffrey Huntley](https://ghuntley.com/), a great engineer and a good friend who's been exploring the extremes of AI for a long time.
 

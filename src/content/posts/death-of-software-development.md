@@ -1,100 +1,45 @@
 ---
 title: 'The Death of Software Development'
-description: 'AI is fundamentally changing how we build software, but not in the way most people think'
+description: 'The job of software developer is dead. You might still be coding, but the profession as you knew it is gone.'
 pubDate: 2026-01-09
 tags: ['ai', 'programming', 'future']
 ---
 
-# The Death of Software Development
+## Background
 
-Software development as we know it is dying. Not because we'll stop building software—quite the opposite. We're entering an era where software creation will explode exponentially. But the *way* we build it, the skills required, and who can build it are undergoing a fundamental transformation.
+I'm Michael Arnaldi, Founder and CEO of Effectful Technologies — the company behind Effect, the TypeScript library for building production-grade systems. I've been programming for most of my life. I started at 11 years old with the goal of cracking video games. Since then, I've written code at every level imaginable: from kernel-level development to the highest abstractions in TypeScript.
 
-## The AI Revolution Isn't What You Think
+Programming has been my life. And now it's gone for good.
 
-When people talk about AI replacing developers, they often imagine a future where ChatGPT writes all the code and developers become obsolete. That's the wrong framing entirely.
+Let me explain.
 
-The real transformation is more subtle and more profound: **AI is democratizing software creation while simultaneously raising the bar for what "good" software means.**
+## The Ralph Wiggum Moment
 
-## What's Actually Dying
+The broader community is just now realizing the power of AI. Last week, "Ralph Wiggum" went viral. Ralph is a technique that prompts agents like Claude Code in a deterministic loop to iteratively build large systems from lists of small tasks. Twitter exploded with discussions about it.
 
-Let me be clear about what's dying:
+The name comes from [Geoffrey Huntley](https://ghuntley.com/), a great engineer and a good friend who's been exploring the extremes of AI for a long time.
 
-1. **Boilerplate-driven development** - The days of spending hours wiring up CRUD endpoints, writing repetitive data access layers, or configuring build systems are numbered. AI excels at this tedious work.
+What people don't realize is that this is just the beginning. The "AI power users" are already working with far more refined techniques — and they're not just building simple things. They're cloning entire companies in hours.
 
-2. **Syntax memorization as a core skill** - Knowing the exact parameters for a library function or remembering API signatures is becoming less valuable when AI can recall and apply them instantly.
+## A Real Example
 
-3. **The junior developer pipeline** - Traditional entry-level positions focused on writing straightforward code are being compressed or eliminated. The learning curve just got steeper.
+I've always been passionate about finance. I used to be a [regulated person](https://register.fca.org.uk/s/individual?id=0030X00002TQAcfQAH) — an executive director in a firm that created derivative products. Since moving on from that life, I still have the occasional urge to check macroeconomic data.
 
-4. **Solo coding as the primary workflow** - The mental model of a developer alone with their IDE is outdated. Development is becoming a dialogue—between human intent and AI capability.
+A few weeks ago, I set myself the goal of analyzing Polymarket. I wanted to spot insider trading, whale activity, derive volatility — a bunch of crazy stuff that only a finance nerd would want. In finance, there's an amazing tool that everybody serious enough ends up using: the [Bloomberg Terminal](https://www.bloomberg.com/professional/products/bloomberg-terminal). It's so popular that the number of terminals per capita is used as a metric to understand financial activity in countries. And for that, the winner is New York! Nope — it's actually Vatican City, with 1.9% of people having a terminal. Almost 4x what Luxembourg has.
 
-## What's Being Born
+There's only one problem with the Bloomberg Terminal — it's fucking expensive. And it's old and clunky in various ways.
 
-But here's what's emerging and becoming more valuable:
+So I decided to "Ralph my way" and build a modern Bloomberg Terminal for Polymarket.
 
-### 1. Systems Thinking
+It took me 2 hours. I wrote 0 lines of code. I reviewed 0 lines of code.
 
-Understanding *what* to build and *why* matters more than ever. AI can generate code, but it can't understand your users, your business constraints, or the second-order effects of technical decisions.
+## What Is Software Development?
 
-The developers who thrive will be those who can:
-- Architect systems at scale
-- Understand business domains deeply
-- Make strategic technical decisions
-- Navigate trade-offs between competing concerns
+If an idiot like me can clone a product that people pay $30k per month to use — in two hours — what is software development?
 
-### 2. Prompt Engineering as Product Design
+It's an interesting question. Software development used to be a craft. Something only a few people could do well. Now everybody can be a software developer.
 
-Writing effective prompts for AI isn't just about getting code—it's about clearly articulating intent, constraints, and desired outcomes. This is fundamentally a *design* skill.
+A friend of mine with a legal background and almost no coding experience built a full-blown compliance solution to check privacy policies against the GDPR. He didn't use tools like Lovable — he hacked it by chatting with Claude Code, using Effect and Next.js. I've checked the code. It's good.
 
-The best "prompt engineers" are really product designers who understand:
-- How to decompose problems
-- What "good" looks like
-- How to communicate requirements precisely
-- When to be specific vs. when to leave room for creativity
+The new software developer is no longer a craftsman. It's the average operator, empowered.
 
-### 3. Quality Assurance as Craft
-
-When AI can generate code in seconds, the bottleneck shifts to validation. Can you:
-- Quickly assess if generated code does what you need?
-- Identify edge cases and failure modes?
-- Ensure security, performance, and maintainability?
-- Refactor AI-generated spaghetti into sustainable systems?
-
-### 4. Human Judgment in Technical Leadership
-
-AI can suggest solutions, but it can't make the hard calls:
-- Should we rewrite or refactor?
-- Is this technical debt acceptable?
-- How do we balance speed and quality?
-- What's the right level of abstraction?
-
-These judgment calls require context, experience, and understanding of organizational dynamics—things AI doesn't have.
-
-## The New Software Development
-
-Here's my prediction: In five years, the most productive developers won't be those who can code the fastest. They'll be those who can:
-
-1. **Understand deeply** - Domain knowledge and systems thinking
-2. **Communicate clearly** - Articulating intent to both humans and AI
-3. **Validate ruthlessly** - Ensuring quality at AI-assisted speeds
-4. **Decide wisely** - Making the strategic calls that AI can't
-
-## What This Means for You
-
-If you're a developer today, your move isn't to compete with AI at writing code. It's to:
-
-- **Go deeper** on business domains and systems architecture
-- **Get better** at technical communication and documentation
-- **Level up** your ability to review, refactor, and improve code
-- **Focus on** the strategic and creative aspects of software development
-
-The death of traditional software development is actually an opportunity. We're moving from a world where coding skill was the bottleneck to one where *thinking* skill is the bottleneck.
-
-And that's a much more interesting game to play.
-
-## The Bottom Line
-
-Software development isn't dying—it's evolving. The mechanical act of translating intent into code is being automated. What remains is everything that makes software development actually interesting: solving problems, designing systems, understanding users, and creating value.
-
-The developers who embrace this shift will be more productive and more valuable than ever before. Those who resist will find themselves competing with AI at exactly what AI does best.
-
-The choice is yours.

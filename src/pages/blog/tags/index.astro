@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+
+const posts = await getCollection('posts');
+const tagCounts = new Map<string, number>();
+
+posts
+  .filter(post => !post.data.draft)
+  .forEach((post) => {
+    post.data.tags.forEach((tag) => {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    });
+  });
+
+const sortedTags = Array.from(tagCounts.entries())
+  .sort((a, b) => b[1] - a[1]);
+---
+
+<Layout title="All Tags">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-8">All Tags</h1>
+
+    {sortedTags.length > 0 ? (
+      <div class="flex flex-wrap gap-3">
+        {sortedTags.map(([tag, count]) => (
+          <a
+            href={`/blog/tags/${tag}`}
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
+          >
+            <span class="font-medium">#{tag}</span>
+            <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">
+              ({count})
+            </span>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p class="text-gray-500">No tags yet.</p>
+    )}
+  </div>
+</Layout>

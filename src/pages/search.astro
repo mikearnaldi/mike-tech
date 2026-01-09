@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Search">
+  <link slot="head" rel="stylesheet" href="/_pagefind/pagefind-ui.css" />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-8">Search</h1>
+
+    <div id="search"></div>
+  </div>
+</Layout>
+
+<style is:global>
+  /* Pagefind UI styles */
+  .pagefind-ui__search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: #111827;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .pagefind-ui__search-input {
+      border-color: #374151;
+      background-color: #1f2937;
+      color: #f3f4f6;
+    }
+  }
+
+  .pagefind-ui__result {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .pagefind-ui__result {
+      border-color: #1f2937;
+    }
+  }
+
+  .pagefind-ui__result-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .pagefind-ui__result-excerpt {
+    color: #4b5563;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .pagefind-ui__result-excerpt {
+      color: #9ca3af;
+    }
+  }
+
+  .pagefind-ui__message {
+    color: #4b5563;
+    padding: 1rem 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .pagefind-ui__message {
+      color: #9ca3af;
+    }
+  }
+</style>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', async () => {
+    const { PagefindUI } = await import('/_pagefind/pagefind-ui.js');
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true,
+      showImages: false,
+    });
+  });
+</script>

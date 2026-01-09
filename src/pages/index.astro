@@ -1,16 +1,68 @@
 ---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
 
+const recentPosts = (await getCollection('posts'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Home">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4">Welcome to My Blog</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400">
+        Exploring programming, Effect, TypeScript, and software engineering
+      </p>
+    </div>
+
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-bold">Recent Posts</h2>
+        <a href="/blog" class="text-blue-600 dark:text-blue-400 hover:underline">
+          View all posts →
+        </a>
+      </div>
+
+      <div class="space-y-6">
+        {recentPosts.map((post) => (
+          <article class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:border-blue-400 dark:hover:border-blue-600 transition-colors">
+            <a href={`/blog/${post.slug}`}>
+              <h3 class="text-2xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                {post.data.title}
+              </h3>
+            </a>
+            <p class="text-gray-600 dark:text-gray-400 mb-3">
+              {post.data.description}
+            </p>
+            <div class="flex items-center gap-4 text-sm text-gray-500">
+              <time datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
+              {post.data.tags.length > 0 && (
+                <div class="flex gap-2">
+                  {post.data.tags.map((tag) => (
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {recentPosts.length === 0 && (
+        <p class="text-gray-500 text-center py-12">
+          No posts yet. Check back soon!
+        </p>
+      )}
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'A personal blog about programming, Effect, and TypeScript' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div class="min-h-screen flex flex-col">
+      <header class="border-b border-gray-200 dark:border-gray-800">
+        <nav class="max-w-4xl mx-auto px-4 py-6">
+          <div class="flex items-center justify-between">
+            <a href="/" class="text-xl font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              My Blog
+            </a>
+            <div class="space-x-6">
+              <a href="/blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
+              <a href="/blog/tags" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tags</a>
+              <a href="/search" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Search</a>
+              <a href="/rss.xml" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">RSS</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="flex-1">
+        <slot />
+      </main>
+
+      <footer class="border-t border-gray-200 dark:border-gray-800 mt-12">
+        <div class="max-w-4xl mx-auto px-4 py-6 text-center text-sm text-gray-600 dark:text-gray-400">
+          <p>&copy; {new Date().getFullYear()} My Blog. Built with Astro and Effect.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -21,6 +21,20 @@ The name comes from [Geoffrey Huntley](https://ghuntley.com/), a great engineer 
 
 But here's the thing: what people don't realize is that Ralph is just the beginning. The "AI power users" — the ones who've been living in this world for months — are already working with far more refined techniques. And they're not just building simple things. They're cloning entire companies in hours.
 
+## Missing the Point
+
+The average software developer is not even close to understanding the extent of this change.
+
+They're obsessed with picking "the best model" — endlessly debating whether Claude is better than GPT, whether Gemini is catching up, whether open-source models can compete. They're missing the point entirely.
+
+The outcome is defined by the process, not the model. The model is just one piece of the puzzle. Think of it like traditional software development: not every developer is exceptional, but a team of good enough developers with the right process can build great software. The same principle applies here. A good enough model with the right process will beat a better model with no process — every single time.
+
+Here's the uncomfortable truth: the state of the art is not public knowledge. Power users are keeping their techniques to themselves — because sharing them is scary. The implications are too big, too disruptive. We'll get there eventually, but not yet.
+
+Tools like Ralph are a good start, but they're fundamentally limited. If you think a model can decide by itself when a task is done and emit a token deterministically, you're not even close to understanding what's possible. That's just scratching the surface.
+
+In the next two years, you'll hear more and more about things like [Lean](https://lean-lang.org/) and [TLA+](https://lamport.azurewebsites.net/tla/tla.html). You'll watch the industry evolve from "Coding Agents" to "Agentic Infrastructure for Coding." The shift will be profound.
+
 ## A Real Example
 
 Let me give you a concrete example.

@@ -25,7 +25,7 @@ jobs:
         run: bun run build
 
       - name: Deploy to Vercel
-        run: bunx vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }} --scope=effect-ts
+        run: bunx vercel deploy --prod --yes --force --token=${{ secrets.VERCEL_TOKEN }} --scope=effect-ts
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

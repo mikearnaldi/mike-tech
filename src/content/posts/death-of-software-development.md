@@ -7,7 +7,7 @@ tags: ['ai', 'programming', 'future']
 
 ## Background
 
-I'm Michael Arnaldi, Founder and CEO of [Effectful Technologies](https://effectful.co/) — the company behind [Effect](https://effect.website/), the TypeScript library for building production-grade systems. I've been programming most of my life. I started at 11 with the goal of cracking video games. Since then, I've written code at every level: from kernel development to the highest abstractions in TypeScript.
+I'm [Michael Arnaldi](https://github.com/mikearnaldi), Founder and CEO of [Effectful Technologies](https://effectful.co/) — the company behind [Effect](https://effect.website/), the TypeScript library for building production-grade systems. I've been programming most of my life. I started at 11 with the goal of cracking video games. Since then, I've written code at every level: from kernel development to the highest abstractions in TypeScript.
 
 Programming has been my life. And now it's gone for good.
 

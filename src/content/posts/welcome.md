@@ -1,42 +1,28 @@
 ---
 title: 'Welcome to My Blog'
-description: 'This is the first post on my new blog built with Astro and Effect'
+description: 'Exploring the intersection of AI, Business, and Programming'
 pubDate: 2026-01-09
-tags: ['blog', 'astro', 'effect']
+tags: ['ai', 'business', 'programming']
 ---
 
 # Welcome to My Blog
 
-This is my first blog post! This blog is built with:
+Welcome! This blog explores the intersection of three powerful forces shaping our world: **Artificial Intelligence**, **Business**, and **Programming**.
 
-- **Astro** - Fast static site generation
-- **Tailwind CSS** - Beautiful styling
-- **Effect** - Type-safe TypeScript
-- **Cloudflare Pages** - Global edge deployment
+## What You'll Find Here
 
-## Code Example
+I write about:
 
-Here's a simple TypeScript example with syntax highlighting:
+- **AI & Machine Learning** - Practical applications, emerging trends, and the impact of AI on software development and business strategy
+- **Business & Technology** - Building scalable products, startup insights, and technology leadership
+- **Programming** - Software architecture, functional programming, type safety, and building robust systems
 
-```typescript
-import { Effect } from "effect"
+## My Background
 
-const program = Effect.gen(function* () {
-  const message = yield* Effect.succeed("Hello, World!")
-  yield* Effect.log(message)
-})
+I'm passionate about building reliable, maintainable software systems that solve real business problems. Whether it's leveraging AI to improve developer productivity, architecting large-scale applications, or exploring new programming paradigms, I'm always looking for better ways to create value through technology.
 
-Effect.runPromise(program)
-```
+## What's Next
 
-## Features
-
-This blog includes:
-
-1. Markdown support
-2. Syntax highlighting
-3. Tag-based organization
-4. RSS feed
-5. Full-text search
+I'll be sharing insights from my experience building products, leading engineering teams, and exploring how AI is transforming the way we write and think about code. Topics will range from practical programming techniques to strategic business decisions around technology adoption.
 
 Stay tuned for more posts!

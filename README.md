@@ -1,18 +1,14 @@
 # Personal Blog
 
-A modern, fast personal blog built with Astro, Tailwind CSS, and deployed to Cloudflare Pages using alchemy-effect.
+A personal blog exploring AI, Business, and Programming.
 
 ## Features
 
-- Static site generation with Astro
-- Markdown-based blog posts with frontmatter
-- Syntax highlighting with Shiki
-- Tag/category system for organizing posts
-- RSS feed generation
-- Full-text search with Pagefind
-- Responsive design with Tailwind CSS
-- Dark mode support
-- Vercel deployment
+- Markdown-based blog posts
+- Tag/category system for organizing content
+- RSS feed for subscribers
+- Full-text search
+- Responsive design with dark mode
 
 ## Project Structure
 

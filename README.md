@@ -117,6 +117,7 @@ This project uses GitHub Actions to automatically deploy to Vercel on every push
    - **VERCEL_TOKEN**: Go to [Vercel Account Settings → Tokens](https://vercel.com/account/tokens)
      - Click "Create Token"
      - Name it (e.g., "GitHub Actions")
+     - **Important**: Make sure the token has access to the team/organization where your project is located
      - Copy the token
 
    - **VERCEL_ORG_ID**: Run this command locally:

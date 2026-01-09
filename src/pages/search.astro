@@ -4,12 +4,23 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Search">
   <link slot="head" rel="stylesheet" href="/_pagefind/pagefind-ui.css" />
+  <script slot="head" is:inline src="/_pagefind/pagefind-ui.js"></script>
 
   <div class="max-w-4xl mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold mb-8">Search</h1>
 
     <div id="search"></div>
   </div>
+
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      new PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+      });
+    });
+  </script>
 </Layout>
 
 <style is:global>
@@ -69,14 +80,3 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
-
-<script is:inline>
-  window.addEventListener('DOMContentLoaded', async () => {
-    const { PagefindUI } = await import('/_pagefind/pagefind-ui.js');
-    new PagefindUI({
-      element: '#search',
-      showSubResults: true,
-      showImages: false,
-    });
-  });
-</script>

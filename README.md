@@ -136,10 +136,11 @@ This project uses GitHub Actions to automatically deploy to Vercel on every push
 
    Go to your GitHub repository → Settings → Secrets and variables → Actions → New repository secret
 
-   Add these three secrets:
+   Add these four secrets:
    - `VERCEL_TOKEN` - Your Vercel token
-   - `VERCEL_ORG_ID` - Your organization ID
-   - `VERCEL_PROJECT_ID` - Your project ID
+   - `VERCEL_ORG_ID` - Your organization ID (e.g., `team_xxxxx`)
+   - `VERCEL_PROJECT_ID` - Your project ID (e.g., `prj_xxxxx`)
+   - `VERCEL_TEAM_SLUG` - Your team slug (e.g., `effect` for the Effect team)
 
 4. **Deploy:**
 

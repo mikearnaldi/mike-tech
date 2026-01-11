@@ -22,15 +22,15 @@ function createTextOverlay(title: string): Buffer {
     <svg width="${OG_WIDTH}" height="${OG_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:rgba(0,0,0,0);stop-opacity:0" />
+          <stop offset="0%" style="stop-color:rgba(0,0,0,0.8);stop-opacity:1" />
           <stop offset="50%" style="stop-color:rgba(0,0,0,0.3);stop-opacity:1" />
-          <stop offset="100%" style="stop-color:rgba(0,0,0,0.8);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(0,0,0,0);stop-opacity:0" />
         </linearGradient>
       </defs>
       <rect width="100%" height="100%" fill="url(#gradient)"/>
       <text
         x="60"
-        y="${OG_HEIGHT - 80}"
+        y="${60 + fontSize}"
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
         font-size="${fontSize}"
         font-weight="bold"
@@ -67,12 +67,11 @@ function wrapText(text: string, fontSize: number): string {
     displayLines[2] = displayLines[2].slice(0, -3) + '...';
   }
 
-  // Create tspan elements for each line, positioned from bottom up
+  // Create tspan elements for each line, positioned from top down
   const lineHeight = fontSize * 1.2;
-  const startY = 0 - (displayLines.length - 1) * lineHeight;
 
   return displayLines
-    .map((line, i) => `<tspan x="60" dy="${i === 0 ? startY : lineHeight}">${line}</tspan>`)
+    .map((line, i) => `<tspan x="60" dy="${i === 0 ? 0 : lineHeight}">${line}</tspan>`)
     .join('');
 }
 

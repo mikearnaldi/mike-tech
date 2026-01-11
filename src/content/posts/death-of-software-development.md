@@ -1,7 +1,7 @@
 ---
 title: 'The Death of Software Development'
 description: 'The job of software developer is dead. You might still be coding, but the profession as you knew it is gone.'
-pubDate: 2026-01-09
+pubDate: 2026-01-11
 tags: ['ai', 'programming', 'future']
 ---
 
@@ -51,6 +51,18 @@ So I decided to "Ralph my way" and build a modern Bloomberg Terminal for Polymar
 
 It took me 2 hours. I wrote 0 lines of code. I reviewed 0 lines of code.
 
+Obviously, I didn't clone the full Bloomberg Terminal — I built the subset I needed for Polymarket analysis. But here's the thing: cloning the full terminal would probably take a day or two of token usage. Not months. Not years. Days.
+
+## Proving It
+
+I know what you're thinking: "This sounds like bullshit." Fair enough. So I'm working on an open source project to prove it isn't.
+
+For my personal needs, I need an accounting application that manages multiple companies across multiple jurisdictions and currencies, with consolidated reporting — all respecting US GAAP standards. The kind of thing that would normally require a team and months of development. Instead, I'm Ralphing my way to a full-blown application in my weekend time. You can follow along at [Accountability](https://github.com/mikearnaldi/accountability).
+
+Here's the catch: I'm deliberately not using state-of-the-art tooling. I'm building everything in the open, from first principles, to prove that this works. No secret sauce. No proprietary techniques. Just the basics, applied correctly.
+
+Once it's done, I'll write a full article explaining how I did it — the process, the issues I found, and everything I learned along the way.
+
 ## What Is Software Development?
 
 Stop and think about that for a moment.
@@ -79,4 +91,4 @@ We're moving from a world where software is scarce to one where it's abundant an
 
 The economic implications are drastic — and poorly understood.
 
-That will be the topic of my next post.
+That will be the topic of a series of future posts.

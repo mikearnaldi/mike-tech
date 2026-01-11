@@ -4,9 +4,20 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
+  url?: string;
 }
 
-const { title, description = 'Exploring AI, Business, and Programming' } = Astro.props;
+const {
+  title,
+  description = 'Exploring AI, Business, and Programming',
+  ogImage,
+  url,
+} = Astro.props;
+
+const siteUrl = 'https://mike.tech';
+const canonicalUrl = url ? `${siteUrl}${url}` : siteUrl;
+const ogImageUrl = ogImage ? `${siteUrl}${ogImage}` : undefined;
 ---
 
 <!doctype html>
@@ -18,6 +29,21 @@ const { title, description = 'Exploring AI, Business, and Programming' } = Astro
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content={ogImageUrl ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+
+    <link rel="canonical" href={canonicalUrl} />
     <slot name="head" />
   </head>
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">

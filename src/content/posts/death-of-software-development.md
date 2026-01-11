@@ -2,7 +2,7 @@
 title: 'The Death of Software Development'
 description: 'The job of software developer is dead. You might still be coding, but the profession as you knew it is gone.'
 pubDate: 2026-01-11
-heroImage: '/images/the-death-of-software-development.png'
+heroImage: '/images/the-death-of-software-development.webp'
 tags: ['ai', 'programming', 'future']
 ---
 

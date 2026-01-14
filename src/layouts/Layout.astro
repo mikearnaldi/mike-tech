@@ -52,7 +52,8 @@ const ogImageUrl = ogImage ? `${siteUrl}${ogImage}` : undefined;
       posthog.init('phc_HjZs5ZHgSrZiDzJScF6KSRSZuW54qsSO5pUagSKCelG', {
         api_host: '/a',
         ui_host: 'https://us.posthog.com',
-        person_profiles: 'always'
+        person_profiles: 'always',
+        disable_session_recording: true
       });
     </script>
   </head>
